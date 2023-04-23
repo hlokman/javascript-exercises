@@ -2,7 +2,7 @@
 const removeFromArray = function(array, ...theArgs) {
     for (let i=array.length - 1; i>=0; i--) {
         for (let j=theArgs.length - 1; j>=0; j--) {
-            if (array[i] !== theArgs[j] || typeof(array[i]) !== typeof(theArgs[j])) {
+            if (array[i] !== theArgs[j] /*|| typeof(array[i]) !== typeof(theArgs[j])*/) {
                 continue;
         }
         array.splice(array.indexOf(theArgs[j]), 1);
